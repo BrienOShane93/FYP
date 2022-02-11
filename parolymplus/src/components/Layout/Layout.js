@@ -1,13 +1,20 @@
-import 'semantic-ui-css/semantic.min.css';
-import './Layout.css';
-import { Container } from 'semantic-ui-react';
-import Nav from '../Nav/Nav';
+import React from "react";
+
+import { Container } from "react-bootstrap"
+
+import TrainerMenu from '../Menu/TrainerMenu';
+import AthleteMenu from '../Menu/AthleteMenu';
 
 const Layout = (props) => {
   return (
-    <Container>
-      <Nav />
-    </Container>
+    <div>
+      <TrainerMenu />
+      <Container>
+        <main>
+          {props.children}
+        </main>
+      </Container>
+    </div>
   )
 };
 
